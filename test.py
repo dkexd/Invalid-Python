@@ -1,2 +1,2 @@
-name = "faggot"
+name = "lol"
 print("Hello " + name + "!")
