@@ -1,4 +1,4 @@
-#!C:\Users\xx\PycharmProjects\TelegaLogger\venv\Scripts\python.exe
+#!C:\Users\xx\PycharmProjects\Invalid-Python\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==19.0.3','console_scripts','pip3'
 __requires__ = 'pip==19.0.3'
 import re
