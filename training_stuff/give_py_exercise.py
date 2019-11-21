@@ -48,6 +48,9 @@ print(exr_urls)
 print(len(exr_urls))
 print(len(exercises))
 print(exercises)
+print('END')
+
+
 # 3. From each link get a <p> which has <strong>, which is header of exercise , do n+1
 # 4. From same <p> Else is text of this exercise
 # 5. create nested 2D list i,j
@@ -55,4 +58,3 @@ print(exercises)
 # 7. after done with scraping(how do I know if it's done?), create random number x
 # 8. random number x is in range of 0:n, n - number of exercises
 # 9. Print list(x) and contents of it
-print('END')
