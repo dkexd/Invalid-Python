@@ -35,9 +35,9 @@ for url in urls:
 
 exercises = []
 for url_soup in exr_urls:
-    x = BeautifulSoup(requests.get(url_soup).content, 'lxml')
-    x.find_all("div", class_="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col")
-    x.find_all('p')
+    soup_ex = BeautifulSoup(requests.get(url_soup).content, 'lxml')
+    div_ex = soup_ex.find_all("div", class_="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col")
+    p_ex = div_ex.findAll('p')
     exercises.append(x)
 #class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col"
 #надо выбрать <p> в нужном <div> брать все подряд нрн
