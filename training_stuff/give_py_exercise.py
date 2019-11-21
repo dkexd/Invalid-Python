@@ -37,12 +37,15 @@ exercises = []
 for url_soup in exr_urls:
     soup_ex = BeautifulSoup(requests.get(url_soup).content, 'lxml')
     div_ex = soup_ex.find_all("div", class_="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col")
+    #пропустить 1 p
+    #пробежаться по подряд идущим p пока они не закончатся тэги p
+    # нечётный p - задание чётный - со ссылкой на ответ, вынимать её
     p_ex = div_ex.findAll('p')
     exercises.append(x)
 #class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col"
 #надо выбрать <p> в нужном <div> брать все подряд нрн
 #пока подряд идущие <p> не закончатся
-#нечётный p - задание чётный - со ссылкой на ответ, вынимать её
+
 
 print(exr_urls)
 print(len(exr_urls))
