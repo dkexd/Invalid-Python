@@ -1,5 +1,5 @@
 # Parsing w3resource site with python exercises and outputing random exercise
-# Requests - HTTP reqeust lib
+# Requests - HTTP request lib
 # bs4 - HTML parser lib
 import requests
 from bs4 import BeautifulSoup
@@ -35,8 +35,11 @@ for url in urls:
 
 exercises = []
 for url_soup in exr_urls:
-    x = BeautifulSoup(requests.get(url_soup).content, 'lxml').find_all("p")
+    x = BeautifulSoup(requests.get(url_soup).content, 'lxml')
+    x.find_all("div", class_="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col")
+    x.find_all('p')
     exercises.append(x)
+#class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col"
 #надо выбрать <p> в нужном <div> брать все подряд нрн
 #пока подряд идущие <p> не закончатся
 #нечётный p - задание чётный - со ссылкой на ответ, вынимать её
@@ -44,6 +47,7 @@ for url_soup in exr_urls:
 print(exr_urls)
 print(len(exr_urls))
 print(len(exercises))
+print(exercises)
 # 3. From each link get a <p> which has <strong>, which is header of exercise , do n+1
 # 4. From same <p> Else is text of this exercise
 # 5. create nested 2D list i,j
