@@ -12,7 +12,8 @@
 # 9. Print list(x) and contents of it
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
+
 reqs = requests.get('https://www.w3resource.com/python-exercises/')
 
 # https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
@@ -44,11 +45,20 @@ for url in urls:
 exercises = []
 for url_soup in exr_urls:
     soup_ex = BeautifulSoup(requests.get(url_soup).content, 'lxml')
-    div_ex = soup_ex.find_all("div", class_="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col")
+    div_ex = soup_ex.find("div", class_="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col")
     #пропустить 1 p
     #пробежаться по подряд идущим p пока они не закончатся тэги p
+    #parasha = new Tag()
+    #parasha
+    p_tag = Tag(Tag(Tag(div_ex).find("p")).nextSibling())
+    for parasha in div_ex:
+        parasha = Tag(parasha)
+        if parasha.name != 'p' break
+            #содержимое ориджинал контента
+            parasha.string
+
     # нечётный p - задание чётный - со ссылкой на ответ, вынимать её
-    p_ex = div_ex.findAll('p')
+    #p_ex = div_ex.findAll('p')
     exercises.append(x)
 #class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col"
 #надо выбрать <p> в нужном <div> брать все подряд нрн
