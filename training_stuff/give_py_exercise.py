@@ -48,14 +48,14 @@ for url_soup in exr_urls:
     div_ex = soup_ex.find("div", class_="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col")
     #пропустить 1 p
     #пробежаться по подряд идущим p пока они не закончатся тэги p
-    #parasha = new Tag()
-    #parasha
+    #paragraph = new Tag()
+    #paragraph
     p_tag = Tag(Tag(Tag(div_ex).find("p")).nextSibling())
-    for parasha in div_ex:
-        parasha = Tag(parasha)
-        if parasha.name != 'p' break
+    for paragraph in div_ex:
+        paragraph = Tag(paragraph)
+        if paragraph.name != 'p' break
             #содержимое ориджинал контента
-            parasha.string
+            paragraph.neё
 
     # нечётный p - задание чётный - со ссылкой на ответ, вынимать её
     #p_ex = div_ex.findAll('p')
