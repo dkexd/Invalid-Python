@@ -55,7 +55,7 @@ for url_soup in exr_urls:
         paragraph = Tag(paragraph)
         if paragraph.name != 'p' break
             #содержимое ориджинал контента
-            paragraph.neё
+            paragraph.ne
 
     # нечётный p - задание чётный - со ссылкой на ответ, вынимать её
     #p_ex = div_ex.findAll('p')
