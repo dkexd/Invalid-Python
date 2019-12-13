@@ -1,10 +1,10 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'python:3.7.4' } }
+    agent any
     stages {
         stage('build') {
             steps {
-                ps 'python petuch.py'
+                cd C:\Users\xx\PycharmProjects\Invalid-Python\
+                python petuch.py
             }
         }
     }
