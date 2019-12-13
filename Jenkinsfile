@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python petuch.py'
+                ps 'python petuch.py'
             }
         }
     }
