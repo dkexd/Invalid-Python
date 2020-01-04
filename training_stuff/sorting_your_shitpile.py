@@ -1,6 +1,6 @@
 #  Sorts files in programs dir by extensions(.exe, .pdf, ...) to sorted dir
 #  IMPROVE?
-#  1. to differentiate versions of the same file
+#  1. to differentiate versions of the same file, test
 
 import os
 import shutil
